@@ -10,27 +10,13 @@ process.on('unhandledRejection', console.error);
 
 connectToMongo();
 
-// ✅ Reusable CORS config
-const corsOptions = {
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      'https://teal-buttercream-3caf29.netlify.app',
-      'http://localhost:3000'
-    ];
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
+// ⚠️ Temporarily allow all CORS origins
+app.use(cors({
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
-};
-
-// ✅ Apply CORS config
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));  // Fix: use same config here
+}));
+app.options('*', cors());
 
 app.use(express.json({ limit: '10mb' }));
 
