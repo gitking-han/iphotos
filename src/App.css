@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.uploadphoto{
+  width: 60%s;
+} 
+
+.content{
+  margin-left: 250px;
+}
+@media (max-width: 480px) {
+  .content{
+    margin-left: 0px
+  }
+}
