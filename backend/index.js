@@ -9,9 +9,9 @@ connectToMongo();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// ✅ CORS configuration to allow Netlify frontend
+// ✅ Fixed CORS (removed trailing slash)
 app.use(cors({
-  origin: "https://teal-buttercream-3caf29.netlify.app/",
+  origin: "https://teal-buttercream-3caf29.netlify.app",
   credentials: true,
 }));
 
