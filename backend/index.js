@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 // ✅ CORS configuration to allow Netlify frontend
 app.use(cors({
-  origin: "https://cute-queijadas-8bc607.netlify.app/",
+  origin: "https://teal-buttercream-3caf29.netlify.app/",
   credentials: true,
 }));
 
