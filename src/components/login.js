@@ -7,7 +7,7 @@ const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://backend-iphotos-production.up.railway.app/api/auth/login", {
+    const response = await fetch("https://backend-iphotos-production-4db8.up.railway.app/api/auth/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

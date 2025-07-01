@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import photoContext from "./PhotoContext";
 
 const PhotoState = (props) => {
-    const host = "https://backend-iphotos-production.up.railway.app";
+    const host = "https://backend-iphotos-production-4db8.up.railway.app";
     const [photos, setPhotos] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
